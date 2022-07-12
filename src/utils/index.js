@@ -156,7 +156,9 @@ export const defaultState = () => {
       // Set the default speed
       speed: 1000,
       // Game isn't over yet
-      gameOver: false
+      gameOver: false,
+      // Top ten list
+      topTenHS: []
     }
 }
 
