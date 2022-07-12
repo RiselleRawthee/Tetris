@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ubuntu/app
+cd /home/ec2-user/app
 
 # start app
 npm start 
