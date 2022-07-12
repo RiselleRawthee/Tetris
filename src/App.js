@@ -2,6 +2,7 @@ import React from 'react';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './reducers'
+import Leaderboard from './utils/leaderboard';
 
 import './App.css';
 
@@ -28,7 +29,9 @@ function App() {
         <Controls />
         <MessagePopup />
         <KeyPressElement />
+        <Leaderboard/>
         <HoldBlock />
+        
       </div>
     </Provider>
   );
