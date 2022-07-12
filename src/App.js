@@ -10,8 +10,6 @@ import './App.css';
 import Game from './components/Game';
 import Header from './components/Header';
 import PreGame from './components/PreGame';
-import LoginButton from './components/Login';
-import LogoutButton from './components/Logout';
 import Profile from './components/Profile';
 
 function App() {
@@ -22,6 +20,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<PreGame />} />
           <Route path='game' element={<Game />} />
+          <Route path='profile' element={<Profile />} />
         </Routes>
       </Router>
     </div>
