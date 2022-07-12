@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { Provider } from 'react-redux';
+import reducers from './reducers'
+import { legacy_createStore as createStore } from 'redux'
+
+const store = createStore(reducers)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,9 +17,9 @@ root.render(
     clientId='fQPgKWyL70WCnYLx91o1IqUGDz0RjHer'
     redirectUri={window.location.origin}
   >
-    <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </React.StrictMode>
+    </Provider>
   </Auth0Provider>
 );
 
