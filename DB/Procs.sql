@@ -38,3 +38,41 @@ AS
 SET NOCOUNT ON;
 DELETE FROM dbo.UserDetails WHERE dbo.UserDetails.userName = @UsrName
 GO
+
+DROP PROCEDURE IF EXISTS [dbo].[DeleteUser]
+GO
+
+CREATE PROCEDURE [dbo].[DeleteUser]
+@UsrName VARCHAR(50)
+AS
+SET NOCOUNT ON;
+DELETE FROM dbo.UserDetails WHERE dbo.UserDetails.userName = @UsrName
+GO
+
+DROP PROCEDURE IF EXISTS [dbo].[ReturnUser]
+GO
+
+CREATE PROCEDURE [dbo].[ReturnUser]
+@UsrName VARCHAR(50)
+AS
+SET NOCOUNT ON;
+SELECT
+	a.userName,
+	a.userScore
+FROM 
+	dbo.UserDetails AS a
+WHERE
+	a.userName = @UsrName
+
+DROP PROCEDURE IF EXISTS [dbo].[retunAll]
+GO
+
+CREATE PROCEDURE [dbo].[returnAll]
+AS
+SET NOCOUNT ON;
+SELECT
+	a.userName,
+	a.userScore
+FROM 
+	dbo.UserDetails AS a
+GO
