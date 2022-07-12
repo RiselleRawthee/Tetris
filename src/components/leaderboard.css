@@ -10,7 +10,9 @@ p{
 }
 
 #header{
-    color: red;
+    color: darkred;
+    font-weight: bold;
+    padding-top: 40px;
 }
 
 #leaderboardTable{
@@ -18,6 +20,7 @@ p{
   border-color: black;
   border-style: solid;
   border-collapse: collapse; 
+  margin-bottom: 10px;
 }
 
 tr{
@@ -31,4 +34,12 @@ th{
 
 td{
   padding-right: 15px;
+}
+
+.leaderboardButton{
+  background-color: darkred;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
 }

@@ -1,26 +1,16 @@
 import './leaderboard.css'
-
-
+import DummyData from '../services/DummyData';
+import { useNavigate } from 'react-router-dom';
 
 export default function Leaderboard(){
-    const scoreList = [
-        {rank: '1',
-        username: 'aaa',
-        score:'123'},
-        {rank: '2',
-        username: 'aaa',
-        score:'123'},
-        {rank: '3',
-        username: 'aaa',
-        score:'123'},
-    ];
-
+    const scoreList = DummyData();
     const playerScore = 0;
+    const navigate = useNavigate();
 
     function renderRow(props) {
         return (
           <tr>
-            <td>{ props.rank }</td>
+            <td>{ props.id }</td>
             <td>{ props.username }</td>
             <td>{ props.score }</td>
           </tr>
@@ -28,7 +18,7 @@ export default function Leaderboard(){
       };
     
     return(
-            <div className='Leader-board' id="leaderboardID">
+            <div className='leaderboard'>
               <h1 id="header"> Leaderboard </h1>
               <p> Your score is: {playerScore}</p>
               <table id="leaderboardTable">
@@ -41,6 +31,7 @@ export default function Leaderboard(){
                 </thead>
                 {scoreList.map((item) => renderRow(item))}
               </table>
+              <button onClick={() => navigate("../game")} className='leaderboardButton'>Return to Game</button>
             </div>
     );
 }

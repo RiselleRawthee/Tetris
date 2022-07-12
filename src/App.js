@@ -11,6 +11,7 @@ import Game from './components/Game';
 import Header from './components/Header';
 import PreGame from './components/PreGame';
 import Profile from './components/Profile';
+import Leaderboard from './components/leaderboard';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/' element={<PreGame />} />
           <Route path='game' element={<Game />} />
           <Route path='profile' element={<Profile />} />
+          <Route path='leaderboard' element={<Leaderboard/>}/>
         </Routes>
       </Router>
     </div>

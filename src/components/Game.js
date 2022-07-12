@@ -8,10 +8,8 @@ import NextBlock from "./NextBlock"
 import ScoreBoard from "./ScoreBoard"
 import MessagePopup from "./MessagePopup"
 import KeyPressElement from "./KeyBoardControls"
-import HoldBlock from "./HoldBlock"
 
 export default function Game(props) {
-  HoldBlock.hasShape = false;
   return (
     <>
         <GridBoard />
@@ -20,7 +18,6 @@ export default function Game(props) {
         <Controls />
         <MessagePopup />
         <KeyPressElement />
-        <HoldBlock />
     </>
   );
 }

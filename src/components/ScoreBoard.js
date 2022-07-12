@@ -1,11 +1,14 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { pause, resume, restart } from '../actions'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { pause, resume, restart } from '../actions';
+import { useNavigate } from "react-router-dom";
+
 
 export default function ScoreBoard(props) {
     const dispatch = useDispatch()
     const game = useSelector((state) => state.game)
     const { score, isRunning, gameOver } = game
+    const navigate = useNavigate();
 
     return (
         <div className="score-board">
@@ -22,6 +25,9 @@ export default function ScoreBoard(props) {
             <button className="score-board-button" onClick={(e) => {
                 dispatch(restart())
             }}>Restart</button>
+            <button className="score-board-button" onClick={(e) => {
+                dispatch(navigate("../leaderboard"))
+            }}>Leaderboard</button>
         </div>
     )
 }

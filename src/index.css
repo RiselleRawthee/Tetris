@@ -118,11 +118,10 @@ code {
   grid-gap: 1px;
 }
 
-.hold-block {
+.leaderboard {
   display: grid;
-  grid-template-columns: repeat(4, var(--tile-size));
-  align-self: flex-start;
-  grid-area: x; /* Grid area l left column */
+  grid-template-columns: 400px;
+  grid-area: l; /* Grid area l left column */
   grid-gap: 1px;
 }
 
@@ -132,6 +131,7 @@ code {
   padding: 1em;
   background-color: var(--color-0);
   border: none;
+  width: 100px;
   /* border-width: 5px; */
   /* border-top-color: var(--button-color-t);
   border-left-color: var(--button-color-l);
