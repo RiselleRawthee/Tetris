@@ -12,6 +12,9 @@ import ScoreBoard from './components/ScoreBoard';
 import MessagePopup from './components/MessagePopup';
 import KeyPressElement from './components/KeyBoardControls';
 import HoldBlock from './components/HoldBlock';
+import LoginButton from './components/Login';
+import LogoutButton from './components/Logout';
+import Profile from './components/Profile';
 
 const store = createStore(reducers)
 
@@ -22,6 +25,9 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Tetris Redux</h1>
         </header>
+        <LoginButton />
+        <LogoutButton />
+        <Profile />
         <GridBoard />
         <NextBlock />
         <ScoreBoard />
