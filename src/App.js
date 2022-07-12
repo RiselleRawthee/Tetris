@@ -1,36 +1,29 @@
 import React from 'react';
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import reducers from './reducers'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from 'react-router-dom';
 
 import './App.css';
 
-import Controls from './components/Controls';
-import GridBoard from './components/GridBoard';
-import NextBlock from './components/NextBlock';
-import ScoreBoard from './components/ScoreBoard';
-import MessagePopup from './components/MessagePopup';
-import KeyPressElement from './components/KeyBoardControls';
-import Leaderboard from './utils/leaderboard';
-//import LeaderBoardElement from .''
-const store = createStore(reducers)
+import Game from './components/Game';
+import Header from './components/Header';
+import PreGame from './components/PreGame';
+import Profile from './components/Profile';
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Tetris Redux</h1>
-        </header>
-        <GridBoard />
-        <NextBlock />
-        <ScoreBoard />
-        <Controls />
-        <MessagePopup />
-        <KeyPressElement />
-        {/* <Leaderboard /> */}
-      </div>
-    </Provider>
+    <div className="App">
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path='/' element={<PreGame />} />
+          <Route path='game' element={<Game />} />
+          <Route path='profile' element={<Profile />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

@@ -1,7 +1,9 @@
 import {
     MOVE_RIGHT, MOVE_LEFT, MOVE_DOWN, ROTATE,
-    PAUSE, RESUME, RESTART, GAME_OVER, HOLD
+
+    PAUSE, RESUME, RESTART, GAME_OVER, HOLD, GET_DATA
   } from '../actions'
+
   
   import {
     defaultState,
@@ -11,6 +13,7 @@ import {
     checkRows,
     randomShape
   } from '../utils'
+  import DummyData from '../services/DummyData'
 
   const gameReducer = (state = defaultState(), action) => {
   const { shape, grid, x, y, rotation, nextShape, score, isRunning } = state
@@ -92,7 +95,10 @@ import {
   
         return defaultState()
 
-      default:
+      
+case GET_DATA:
+        return { ...state, topTenHS: DummyData.call() }
+        default:
         return state
     }
   }

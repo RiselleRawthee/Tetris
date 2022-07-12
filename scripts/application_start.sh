@@ -2,8 +2,11 @@
 
 cd /home/ec2-user/app
 
+# end any running apps
+pm2 delete all
+
 # start app
-npm start 
+# npm start
 pm2 start npm --name "tetris" -- start
 pm2 startup
 pm2 save
