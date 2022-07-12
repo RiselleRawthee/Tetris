@@ -6,6 +6,7 @@ cd /home/ec2/app
 # pm2 delete all
 
 # start app
+npm start
 pm2 start npm --name "tetris" -- start
 pm2 startup
 pm2 save
