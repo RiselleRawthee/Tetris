@@ -12,7 +12,8 @@ import ScoreBoard from './components/ScoreBoard';
 import MessagePopup from './components/MessagePopup';
 import KeyPressElement from './components/KeyBoardControls';
 import HoldBlock from './components/HoldBlock';
-
+import Leaderboard from './utils/leaderboard';
+//import LeaderBoardElement from .''
 const store = createStore(reducers)
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <MessagePopup />
         <KeyPressElement />
         <HoldBlock />
+        <Leaderboard/>
       </div>
     </Provider>
   );
