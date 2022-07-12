@@ -7,7 +7,8 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/app
-    file_exists_behavior: OVERWRITE
+    overwrite: true
+file_exists_behavior: RETAIN
 
 permissions:
   - object: /
