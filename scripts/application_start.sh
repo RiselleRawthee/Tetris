@@ -2,8 +2,8 @@
 
 cd /home/ec2/app
 
-# end any running apps
-pm2 delete all
+# # end any running apps
+# pm2 delete all
 
 # start app
 pm2 start npm --name "tetris" -- start
