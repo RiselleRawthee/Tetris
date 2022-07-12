@@ -2,8 +2,8 @@
 
 cd /home/ec2-user/app
 
-# # end any running apps
-# pm2 delete all
+# end any running apps
+pm2 delete all
 
 # start app
 # npm start
