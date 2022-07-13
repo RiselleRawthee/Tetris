@@ -1,8 +1,9 @@
 import {
     MOVE_RIGHT, MOVE_LEFT, MOVE_DOWN, ROTATE,
+
     PAUSE, RESUME, RESTART, GAME_OVER, HOLD, GET_DATA
   } from '../actions'
-import HoldBlock from '../components/HoldBlock'
+
   
   import {
     defaultState,
@@ -94,26 +95,10 @@ import HoldBlock from '../components/HoldBlock'
   
         return defaultState()
 
-      case HOLD:
-        if (HoldBlock.hasShape){
-          state.shape = HoldBlock.shape
-          HoldBlock.shape = state.nextShape
-        }
-        else{
-          HoldBlock.shape = state.shape
-          HoldBlock.hasShape = true;
-        }
-        newState = defaultState()
-        newState.grid = newGrid
-        newState.shape = nextShape
-        newState.score = score
-        newState.isRunning = isRunning
-      return state;
-
-      case GET_DATA:
+      
+case GET_DATA:
         return { ...state, topTenHS: DummyData.call() }
-  
-      default:
+        default:
         return state
     }
   }

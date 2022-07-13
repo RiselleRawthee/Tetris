@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { pause, resume, moveDown, moveLeft, moveRight, rotate, hold } from '../actions'
-import HoldBlock from './HoldBlock';
 
 const ESCAPE_KEYS = ["ArrowLeft", "ArrowRight", "ArrowDown","ArrowUp", " ", "p"];
 
