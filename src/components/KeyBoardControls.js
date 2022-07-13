@@ -57,7 +57,6 @@ export default function KeyPressElement() {
             default:
               break;
         }
-      console.log("Escape key pressed!");
     }
   };
 

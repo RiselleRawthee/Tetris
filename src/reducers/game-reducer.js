@@ -1,7 +1,7 @@
 import {
     MOVE_RIGHT, MOVE_LEFT, MOVE_DOWN, ROTATE,
 
-    PAUSE, RESUME, RESTART, GAME_OVER, HOLD, GET_DATA
+    PAUSE, RESUME, RESTART, GAME_OVER, GET_DATA
   } from '../actions'
 
   
@@ -11,13 +11,12 @@ import {
     canMoveTo,
     addBlockToGrid,
     checkRows,
-    randomShape
   } from '../utils'
   import DummyData from '../services/DummyData'
 
-  const gameReducer = (state = defaultState(), action) => {
-  const { shape, grid, x, y, rotation, nextShape, score, isRunning } = state
 
+  const GameReducer = (state = defaultState(), action) => {
+  const { shape, grid, x, y, rotation, nextShape, score, isRunning } = state
     switch(action.type) {
       case ROTATE:
 
@@ -58,12 +57,14 @@ import {
         const obj = addBlockToGrid(shape, grid, x, y, rotation)
         const newGrid = obj.grid
         const gameOver = obj.gameOver
-      
+        
         if (gameOver) {
           // Game Over
           const newState = { ...state }
           newState.shape = 0
           newState.grid = newGrid
+          
+          
           return { ...state, gameOver: true }
         }
       
@@ -103,4 +104,4 @@ case GET_DATA:
     }
   }
   
-  export default gameReducer
+  export default GameReducer
