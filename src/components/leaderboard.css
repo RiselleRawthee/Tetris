@@ -1,0 +1,45 @@
+div {
+    text-align: center;
+    display: block;
+    width: auto;
+    align-self: center;
+  }
+
+p{
+  font-weight: bold;
+}
+
+#header{
+    color: darkred;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+#leaderboardTable{
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  border-collapse: collapse; 
+  margin-bottom: 10px;
+}
+
+tr{
+  border-top: 1px solid black; 
+  border-bottom: 1px solid black;
+}
+
+th{
+  padding-right: 15px;
+}
+
+td{
+  padding-right: 15px;
+}
+
+.leaderboardButton{
+  background-color: darkred;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
