@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 cd /home/ec2-user/app
@@ -11,7 +12,6 @@ pm2 save
 pm2 restart all
 
 # start app
-# npm start
 cd src/server
 pm2 start node api-server.js
 pm2 startup
