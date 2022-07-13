@@ -18,11 +18,11 @@ export const ExternalApi = () => {
     }
   };
 
-  const callSecureApi = async () => {
+  const callSecureApi = async (url) => {
     try {
       const token = await getAccessTokenSilently();
       const response = await fetch(
-        `http://localhost:7000/api/private-message`,
+        `http://localhost:7000/api/${url}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ export const ExternalApi = () => {
         <Button onClick={callAPI} color="primary" className="mt-5">
           Get Public Message
         </Button>
-        <Button onClick={callSecureApi} color="primary" className="mt-5">
+        <Button onClick={() =>{callSecureApi('private-message')}} color="primary" className="mt-5">
           Get Private Message
         </Button>
       </ButtonGroup>
