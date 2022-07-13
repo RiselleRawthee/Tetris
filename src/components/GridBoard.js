@@ -72,4 +72,3 @@ export default function GridBoard(props) {
         </div>
     )
 }
-
