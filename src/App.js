@@ -7,7 +7,7 @@ import { Home, Profile, ExternalApi } from "./views";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Loading } from "./components/loading";
 
-import "./app.css";
+import "./App.css";
 
 const App = () => {
   const { isLoading } = useAuth0();
