@@ -2,9 +2,6 @@
 
 Our own version of Tetris.
 
-##Install Dependencies: 
-- npm install
-
 ## Stack
 | Target | Technology |
 | --- | --- |
@@ -23,12 +20,13 @@ Before running the app, you need a few things first:
 
 ## Running The Application
 
-In your favourite shell / terminal:
+Open up your favourite shell / terminal:
 * `git clone https://github.com/zaeemasvatbbd/Tetris.git`
 * `cd Tetris`
 * `npm install`
+* `node .\src\server\api-server.js`
 
-and: 
+Open a new terminal window and:
 
 ### `npm start` 
 Runs the app in the development mode.\
