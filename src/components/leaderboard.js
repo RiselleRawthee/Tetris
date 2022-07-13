@@ -3,14 +3,14 @@ import DummyData from '../services/DummyData';
 import { useNavigate } from 'react-router-dom';
 
 export default function Leaderboard(){
-    const scoreList = DummyData();
+    const scoreList = DummyData().sort((a, b) => { return b.score - a.score });
     const playerScore = 0;
     const navigate = useNavigate();
 
-    function renderRow(props) {
+    function renderRow(props, index) {
         return (
           <tr>
-            <td>{ props.id }</td>
+            <td>{ index }</td>
             <td>{ props.username }</td>
             <td>{ props.score }</td>
           </tr>
@@ -29,7 +29,7 @@ export default function Leaderboard(){
                     <th>Score</th>
                   </tr>
                 </thead>
-                {scoreList.map((item) => renderRow(item))}
+                {scoreList.map((item, index) => renderRow(item, index + 1))}
               </table>
               <button onClick={() => navigate("../game")} className='leaderboardButton'>Return to Game</button>
             </div>
