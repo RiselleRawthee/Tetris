@@ -15,6 +15,7 @@
     "highlight.js": "^10.1.1",
     "jwks-rsa": "^1.8.1",
     "morgan": "^1.10.0",
+    "mssql": "^8.1.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
