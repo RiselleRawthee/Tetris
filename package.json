@@ -1,5 +1,5 @@
 {
-  "name": "auth0-react-sdk-sample",
+  "name": "Tetris",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +21,8 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "redux": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

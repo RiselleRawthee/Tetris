@@ -31,6 +31,14 @@ const MainNav = () => (
     >
       External API
     </Nav.Link>
+    <Nav.Link
+      as={RouterNavLink}
+      to="/leaderboard"
+      exact
+      activeClassName="router-link-exact-active"
+    >
+      LeaderBoard
+    </Nav.Link>
   </Nav>
 );
 
